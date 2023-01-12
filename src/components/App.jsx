@@ -29,7 +29,9 @@ export class App extends Component {
     };
 
     if (this.findDubleContact(name)) {
+      // this.setState({ name: ''});
       alert(`${name} is already in contacts`);
+      
       return;
     }
 
@@ -38,7 +40,7 @@ export class App extends Component {
     }));
   };
 
-  ChangeFilter = event => {
+  changeFilter = event => {
     this.setState({ filter: event.target.value });
   };
 
@@ -84,7 +86,7 @@ export class App extends Component {
         >
           Contacts
         </h2>
-        <Filter value={this.state.filter} onChangeFilter={this.ChangeFilter} />
+        <Filter value={this.state.filter} onChangeFilter={this.changeFilter} />
         <ContactList
           contacts={this.getUpdateContacts()}
           onDelete={this.handleDelete}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+//  import PropTypes from 'prop-types';
 import css from './ContactForm.module.css';
 
 export class ContactForm extends Component {
@@ -6,7 +7,7 @@ export class ContactForm extends Component {
     name: '',
     number: '',
   };
-
+  
   handleChange = event => {
     // console.log(event.target.value);
     const { name, value } = event.target;
@@ -61,3 +62,13 @@ export class ContactForm extends Component {
     );
   }
 }
+
+// static propTypes = {
+//   state: PropTypes.objectOf(
+//     PropTypes.share({
+//       name: PropTypes.string,
+//       number: PropTypes.string,
+//     })
+//   ).isRequired,
+// };
+
