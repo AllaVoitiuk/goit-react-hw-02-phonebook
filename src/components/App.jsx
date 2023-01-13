@@ -32,12 +32,13 @@ export class App extends Component {
       // this.setState({ name: ''});
       alert(`${name} is already in contacts`);
       
-      return;
+      return false;
     }
 
     this.setState(prevState => ({
       contacts: [contact, ...prevState.contacts],
     }));
+    return true;
   };
 
   changeFilter = event => {
